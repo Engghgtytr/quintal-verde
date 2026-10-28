@@ -1,0 +1,7 @@
+# Quintal Verde
+
+> Restaurante vegano FICTÍCIO, feito como projeto de portfólio da Penchel.Dev. Nenhum pedido é real, nada é cobrado e o endereço não existe. Fotos ilustrativas do Unsplash.
+
+- Buffet por quilo que muda todo dia, com ingredientes e alergênicos de cada prato.
+- Pratos da cozinha, sucos e sobremesas pedidos pelo QR code da mesa, com senha e acompanhamento ao vivo.
+- Painel do balcão: pedidos, buffet do dia, itens esgotados e QR codes das mesas.

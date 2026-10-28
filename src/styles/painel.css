@@ -1,0 +1,59 @@
+/* Painel do balcão: feito para tela de PC ou tablet no balcão, mas funciona no celular. */
+.painel { min-height: 100dvh; background: var(--fundo); }
+.portaria { max-width: 520px; margin: 0 auto; padding: 64px 16px; display: grid; gap: 14px; justify-items: start; }
+.portaria h1 { font-size: 2rem; }
+.portaria p { color: var(--texto-2); }
+.painel__topo { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; padding: 12px 16px; background: var(--papel); border-bottom: 1px solid var(--linha); }
+.painel__resumo { margin-right: auto; color: var(--texto-2); font-weight: 600; }
+.painel__abas { display: flex; gap: 4px; overflow-x: auto; padding: 0 16px; background: var(--papel); border-bottom: 1px solid var(--linha); }
+.painel__aba { min-height: 48px; padding: 0 14px; border: 0; border-bottom: 3px solid transparent; background: none; font-weight: 650; color: var(--texto-2); cursor: pointer; white-space: nowrap; }
+.painel__aba[aria-selected='true'] { color: var(--texto); border-bottom-color: var(--folha); }
+.contador { display: inline-block; min-width: 22px; padding: 0 6px; border-radius: 999px; background: var(--beterraba); color: #fff; font-size: 0.8125rem; text-align: center; }
+.painel__conteudo { padding: 20px 16px 48px; max-width: 1400px; margin: 0 auto; }
+.painel__conteudo > h2 { font-size: 1.5rem; }
+.painel__ajuda { color: var(--texto-2); margin: 4px 0 16px; }
+
+.quadro-pedidos { display: grid; gap: 16px; }
+@media (min-width: 900px) { .quadro-pedidos { grid-template-columns: repeat(3, 1fr); align-items: start; } }
+.coluna h2 { font-size: 1.0625rem; display: flex; gap: 8px; align-items: center; margin-bottom: 10px; }
+.coluna h2 span { color: var(--texto-2); font-weight: 600; }
+.coluna__vazia { color: var(--texto-2); font-size: 0.9375rem; padding: 16px; border: 1.5px dashed var(--linha); border-radius: 8px; }
+.comandas { list-style: none; padding: 0; display: grid; gap: 10px; }
+.comanda { background: #fff; border: 1px solid var(--linha); border-left: 5px solid var(--abobora); border-radius: 8px; padding: 12px 14px; display: grid; gap: 8px; }
+.comanda--preparando { border-left-color: var(--folha); }
+.comanda--pronto { border-left-color: var(--mata); }
+.comanda__topo { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.comanda__senha { font-size: 1.75rem; font-weight: 800; font-variant-numeric: tabular-nums; }
+.comanda__onde { font-weight: 700; }
+.comanda__tempo { margin-left: auto; color: var(--texto-2); font-size: 0.875rem; }
+.comanda__nome { font-weight: 600; }
+.comanda__itens { list-style: none; padding: 0; display: grid; gap: 6px; }
+.comanda__itens li { display: grid; font-size: 0.9375rem; }
+.comanda__itens span { color: var(--texto-2); font-size: 0.875rem; }
+.comanda__sem { color: var(--beterraba) !important; font-weight: 700; }
+.comanda__alerg { color: #6d4708 !important; }
+.comanda__end, .comanda__pag { font-size: 0.875rem; color: var(--texto-2); }
+.comanda__acoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.encerrados { margin-top: 24px; }
+.encerrados summary { cursor: pointer; font-weight: 650; }
+.encerrados ul { margin-top: 8px; padding-left: 20px; color: var(--texto-2); }
+
+.interruptores { list-style: none; padding: 0; display: grid; gap: 8px; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+.interruptor { display: flex; gap: 12px; align-items: center; padding: 12px 14px; background: #fff; border: 1px solid var(--linha); border-radius: 8px; cursor: pointer; min-height: 56px; }
+.interruptor input { width: 22px; height: 22px; accent-color: var(--folha); flex: none; }
+.interruptor strong { display: block; }
+.interruptor small { color: var(--texto-2); }
+.interruptor--off { background: var(--beterraba-clara); }
+
+.qrs { list-style: none; padding: 0; margin-top: 16px; display: grid; gap: 12px; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); }
+.qr { background: #fff; border: 1px solid var(--linha); border-radius: 8px; padding: 14px; text-align: center; break-inside: avoid; }
+.qr__img svg { width: 100%; height: auto; display: block; }
+.qr__mesa { font-size: 1.375rem; font-weight: 800; margin-top: 6px; }
+.qr__dica { font-size: 0.8125rem; color: var(--texto-2); }
+
+@media print {
+  .painel__topo, .painel__abas, .nao-imprime, .painel__ajuda, .toasts, .pular { display: none !important; }
+  .painel, body { background: #fff; }
+  .qrs { grid-template-columns: repeat(3, 1fr); }
+  .qr { border: 1px dashed #999; }
+}

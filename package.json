@@ -1,0 +1,22 @@
+{
+  "name": "quintal-verde",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Quintal Verde (restaurante vegano fictício): buffet do dia, cardápio, pedido pelo QR da mesa e tela do balcão. Projeto de portfólio da Penchel.Dev",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "imagens": "node scripts/otimizar-imagens.mjs"
+  },
+  "devDependencies": {
+    "sharp": "^0.35.5",
+    "vite": "^8.3.4",
+    "vitest": "^5.0.5"
+  },
+  "dependencies": {
+    "qrcode-generator": "^1.4.4"
+  }
+}
